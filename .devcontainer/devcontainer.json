@@ -1,16 +1,16 @@
 {
-	"name": "Miniconda (Python 3)",
-	"build": { 
+	"name": "mer0's Miniconda",
+	"build": {
 		"context": "..",
 		"dockerfile": "Dockerfile",
 		"args": {
-			"NODE_VERSION": "lts/*"
+			"NODE_VERSION": "none" // "lts/*"
 		}
 	},
 
 	// Set *default* container specific settings.json values on container create.
-	"settings": { 
-		"python.defaultInterpreterPath": "/opt/conda/bin/python",
+	"settings": {
+        "python.defaultInterpreterPath": "/opt/conda/bin/python",
 		"python.linting.enabled": true,
 		"python.linting.pylintEnabled": true,
 		"python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
@@ -26,8 +26,71 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"ms-python.python",
-		"ms-python.vscode-pylance"
+        //
+        // Python & Development
+        //
+        "ms-python.python",
+		"ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.jupyter-renderers",
+        "christian-kohler.path-intellisense",
+        "ms-vscode.references-view",
+        "donjayamanne.python-environment-manager",
+        "irongeek.vscode-env",
+        "njpwerner.autodocstring",
+        "njqdev.vscode-python-typehint",
+        "randomfractalsinc.vscode-data-preview",
+        "hilleer.yaml-plus-json",
+        "kevinrose.vsc-python-indent",
+        "redhat.vscode-yaml",
+        "visualstudioexptteam.intellicode-api-usage-examples",
+        "visualstudioexptteam.vscodeintellicode",
+        "vittorioromeo.expand-selection-to-scope",
+        "ms-vscode.vscode-js-profile-table",
+        // "ecksdy.env-switcher",
+        //
+        // Remote
+        //
+        // "ms-vscode-remote.remote-containers",
+        // "ms-vscode-remote.remote-ssh",
+        // "ms-vscode-remote.remote-ssh-edit",
+        // "ms-vscode-remote.remote-wsl",
+        // "ms-vscode-remote.remote-wsl-recommender",
+        // "ms-vscode-remote.vscode-remote-extensionpack",
+        // "ms-azuretools.vscode-docker",
+        // "amazonwebservices.aws-toolkit-vscode",
+        // "mark-tucker.aws-cli-configure"
+        // "vscode-aws-console.vscode-aws-console",
+        "gitpod.gitpod-remote-ssh",
+        //
+        // Themes & Icons & Keymaps & ToDos
+        //
+        // "github.github-vscode-theme",
+        // "ms-vscode.sublime-keybindings",
+        // "azemoh.one-monokai",
+        // "antfu.icons-carbon",
+        // "bierner.markdown-yaml-preamble",
+        // "rangav.vscode-thunder-client",
+        // "wesbos.theme-cobalt2",
+        "gruntfuggly.todo-tree",
+        "jgclark.vscode-todo-highlight",
+        //
+        // Profiles & Git
+        //
+        // "shan.code-settings-sync",
+        // "evald24.vscode-extension-profiles",
+        // "gitkraken.gitkraken-authentication",
+        // "eamodio.gitlens",
+        // "atlassian.atlascode",
+        //
+        // Markdown
+        //
+        "yzhang.markdown-all-in-one",
+        "jebbs.markdown-extended",
+        "kortina.vscode-markdown-notes",
+        // "svsool.markdown-memo"
+
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
